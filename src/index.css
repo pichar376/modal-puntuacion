@@ -18,71 +18,84 @@ div{
 .modal-content{
   border-radius: 15px;
   background-color: hsl(213, 19%, 18%);
-  box-shadow: 0 0 3rem #00000060 inset ;
   display: flex;
   justify-content: center;
-  height:35vh;
-  width: 17%;
+  height:380px;
+  width: 350px;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar{
+display: none;
 }
 .modal{
-width: 90%;
-height: 100%;
+width: 85%;
+height: 85%;
 color:rgb(177, 179, 185);
   display: flex;
   align-items:flex-start;
   flex-direction: column;
   justify-content: space-evenly;
+  
+  
 
 
 }
 p{
-  font-size: .5rem;
-  word-spacing: 2px;
+  font-size: 15px;
+  margin-bottom: .5rem;
+  color:hsl(216, 12%, 54%);
 }
 .puntuacion{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width:100%;
 
 }
 .circle{
-  font-size:.5rem;
+  font-size:15px;
   text-align: center;
-  line-height:1.5rem;
-  width: 1.5rem;
-  height:1.5rem;
+  line-height:2.5rem;
+  width: 2.5rem;
+  height:2.5rem;
   border-radius: 50%;
-  background-color: #00000020;
+  background-color: #000;
   border:none;
   color:rgb(177, 179, 185);
-  transition: all .4s ease-in-out;
+  transition: .2s ease-in-out;
 }
 .circle-star{
-  font-size:.5rem;
-  text-align: center;
-  line-height:1.5rem;
-  width: 1.5rem;
-  height:1.5rem;
+  position: relative;
+  font-size:15px;
+  line-height:2.5rem;
+  width: 2.5rem;
+  height:2.5rem;
   border-radius: 50%;
-  background-color: #00000020;
+  background-color: #000;
 }
+svg{
+  position: absolute;
+  top:12px;
+  left:12px;
+}
+
 .how{
-  font-size:1rem;
-  font-weight: 550;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  
+  color:white;
+  font-weight: 700;
+  font-size: 30px;
+  margin:1rem 0;
 }
 nav{
-  width: 100%; 
+  width: 100%;
 }
 input{
   width:inherit;
-  height: 1.5rem;
-  border-radius: 1rem;
+  height: 2.8rem;
+  border-radius: 1.35rem;
   background-color:hsl(25, 97%, 53%);
   border:none;
-  margin-top: 1rem;
+  color:white;
+  font-size: 15px;
+  margin-top: 1.5rem;
 }
 .svg{
   height: 50px;
@@ -90,8 +103,19 @@ input{
   
 }
 button:hover{
-background-color:hsl(217, 12%, 63%);
+background-color:hsl(25, 97%, 53%);
 color:white;
+cursor: pointer;
+}
+input[type="submit"]{
+  transition-property:background-color,color ;
+  transition-duration:.4s;
+ transition-timing-function: ease-in-out;
+}
+input[type="submit"]:hover{
+background-color:white
+;
+color:hsl(25, 97%, 53%);
 cursor: pointer;
 }
 form{
