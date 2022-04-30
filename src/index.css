@@ -72,7 +72,7 @@ p{
   border-radius: 50%;
   background-color: #000;
 }
-svg{
+.svg-star{
   position: absolute;
   top:12px;
   left:12px;
@@ -121,4 +121,9 @@ cursor: pointer;
 form{
   width: 100%;
   padding: 1rem 0;
+}
+
+.thank-you{
+  border: thin solid gray;
+  z-index: 3;
 }
