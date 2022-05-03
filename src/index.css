@@ -15,7 +15,7 @@ div{
  justify-content: center;
  align-items: center;
 }
-.modal-content{
+.modal-container{
   border-radius: 15px;
   background-color: hsl(213, 19%, 18%);
   display: flex;
@@ -109,7 +109,7 @@ cursor: pointer;
 }
 input[type="submit"]{
   transition-property:background-color,color ;
-  transition-duration:.4s;
+  transition-duration:.3s;
  transition-timing-function: ease-in-out;
 }
 input[type="submit"]:hover{
@@ -126,4 +126,12 @@ form{
 .thank-you{
   border: thin solid gray;
   z-index: 3;
+}
+
+.text-center-flex{
+  display: flex;
+  justify-content: center;
+}
+.hand{
+  cursor:pointer;
 }
