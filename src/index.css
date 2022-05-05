@@ -2,7 +2,8 @@ body{
   background-color:hsl(216, 12%, 8%);
   margin: 0;
 }
-*{
+*,*:after,
+*:before{
   padding: 0px;
   margin: 0;
   font-family:sans-serif;
@@ -11,7 +12,7 @@ div{
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: row ;
+  flex-direction: column;
  justify-content: center;
  align-items: center;
 }
@@ -20,8 +21,8 @@ div{
   background-color: hsl(213, 19%, 18%);
   display: flex;
   justify-content: center;
-  height:380px;
-  width: 350px;
+  height:65vh;
+  width: 20em;
   overflow-y: scroll;
 }
 ::-webkit-scrollbar{
@@ -34,11 +35,6 @@ color:rgb(177, 179, 185);
   display: flex;
   align-items:flex-start;
   flex-direction: column;
-  justify-content: space-evenly;
-  
-  
-
-
 }
 p{
   font-size: 15px;
@@ -58,19 +54,18 @@ p{
   width: 2.5rem;
   height:2.5rem;
   border-radius: 50%;
-  background-color: #000;
+  background-color: #00000030;
   border:none;
   color:rgb(177, 179, 185);
   transition: .2s ease-in-out;
 }
 .circle-star{
   position: relative;
-  font-size:15px;
   line-height:2.5rem;
   width: 2.5rem;
   height:2.5rem;
   border-radius: 50%;
-  background-color: #000;
+  background-color: #00000030;
 }
 .svg-star{
   position: absolute;
@@ -102,7 +97,7 @@ input{
   width: 200px;
   
 }
-button:hover{
+input[type="button"]:hover{
 background-color:hsl(25, 97%, 53%);
 color:white;
 cursor: pointer;
@@ -113,8 +108,7 @@ input[type="submit"]{
  transition-timing-function: ease-in-out;
 }
 input[type="submit"]:hover{
-background-color:white
-;
+background-color:white;
 color:hsl(25, 97%, 53%);
 cursor: pointer;
 }
@@ -123,10 +117,7 @@ form{
   padding: 1rem 0;
 }
 
-.thank-you{
-  border: thin solid gray;
-  z-index: 3;
-}
+
 
 .text-center-flex{
   display: flex;
@@ -134,4 +125,15 @@ form{
 }
 .hand{
   cursor:pointer;
+}
+
+.selected{
+  background-color: LightGrey;
+  color:hsl(25, 97%, 53%);
+}
+main{
+  display:flex;
+  flex-direction: column;
+  margin-top: 0;
+  padding: 0;
 }
