@@ -8,6 +8,9 @@ const Modal = ({ setModal, setSelect, select, msg, setMsg }) => {
     e.preventDefault()
     if (!select.name) {
       setMsg(true)
+      setTimeout(() => {
+        setMsg(false)
+      }, 3000);
     } else {
       setModal(true)
     }
