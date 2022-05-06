@@ -22,7 +22,7 @@ display:flex;
 flex-direction:column;
 border-radius: 15px;
 background-color: hsl(213, 19%, 18%);
-height:65vh;
+height:70vh;
 width: 20em;
 overflow-y: scroll;
 `

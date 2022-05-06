@@ -21,7 +21,7 @@ div{
   background-color: hsl(213, 19%, 18%);
   display: flex;
   justify-content: center;
-  height:65vh;
+  height:73vh;
   width: 20em;
   overflow-y: scroll;
 }
