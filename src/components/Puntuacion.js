@@ -7,15 +7,13 @@ const initialActive = {
 
 
 
-const Puntuacion = ({ setSelect, select, setMsg }) => {
+const Puntuacion = ({ setSelect, select, setMsg, msg }) => {
   const [active, setActive] = useState(initialActive);
   const handleClick = (e) => {
     setSelect({
-      ...select,
       name: e.target.name,
     })
     setActive({
-      ...active,
       id: e.target.name
     })
     setMsg(false)
@@ -27,17 +25,22 @@ const Puntuacion = ({ setSelect, select, setMsg }) => {
 
 
   return (
-    <section className="puntuacion">
+    <section className='puntuacion'>
       <input type="button" value="1" name="1" onClick={handleClick}
-        className={`circle ${active.id === "1" && "selected"}`} />
+        className={`circle ${active.id === "1" && "selected"} 
+        ${msg && "crecer-element"}`} />
       <input type="button" value="2" name="2" onClick={handleClick}
-        className={`circle ${active.id === "2" && "selected"}`} />
+        className={`circle ${active.id === "2" && "selected"} 
+        ${msg && "crecer-element"}`} />
       <input type="button" value="3" name="3" onClick={handleClick}
-        className={`circle ${active.id === "3" && "selected"}`} />
+        className={`circle ${active.id === "3" && "selected"} 
+        ${msg && "crecer-element"}`} />
       <input type="button" value="4" name="4" onClick={handleClick}
-        className={`circle ${active.id === "4" && "selected"}`} />
+        className={`circle ${active.id === "4" && "selected"} 
+        ${msg && "crecer-element"}`} />
       <input type="button" value="5" name="5" onClick={handleClick}
-        className={`circle ${active.id === "5" && "selected"}`} />
+        className={`circle ${active.id === "5" && "selected"}
+        ${msg && "crecer-element"}`} />
     </section>
   );
 }

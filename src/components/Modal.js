@@ -1,7 +1,7 @@
 
 import Puntuacion from "./Puntuacion";
 
-const Modal = ({ setModal, setSelect, select, msg, setMsg }) => {
+const Modal = ({ setModal, setSelect, select, setMsg, msg }) => {
 
 
   const handleSubmit = (e) => {
@@ -10,7 +10,7 @@ const Modal = ({ setModal, setSelect, select, msg, setMsg }) => {
       setMsg(true)
       setTimeout(() => {
         setMsg(false)
-      }, 3000);
+      }, 2000);
     } else {
       setModal(true)
     }
@@ -30,13 +30,12 @@ const Modal = ({ setModal, setSelect, select, msg, setMsg }) => {
         <p>to help us improve our offering!</p>
 
         <form onSubmit={handleSubmit}>
-          <Puntuacion setModal={setModal} setSelect={setSelect} select={select} setMsg={setMsg} />
+          <Puntuacion setModal={setModal} setSelect={setSelect} select={select} setMsg={setMsg} msg={msg} />
           <nav>
             <input type="submit" value="SUBMIT" />
           </nav>
         </form>
       </article >
-      <p>{msg}</p>
     </div >
 
   );

@@ -13,8 +13,8 @@ const ContainerModals = () => {
     <div>
       {modal ? <Modal2 setModal={setModal} initialSelect={initialSelect} setSelect={setSelect} select={select} /> : <Modal setModal={setModal} setSelect={setSelect} select={select} initialState={initialSelect} msg={msg} setMsg={setMsg} />}
       <br />
-      <article>
-        {msg && <Message />}
+      <article className={`${msg ? "active-msg" : "desactive-msg"}`}>
+        {<Message />}
       </article>
     </div>
 
