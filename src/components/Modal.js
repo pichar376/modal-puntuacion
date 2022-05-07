@@ -1,22 +1,10 @@
 
+import { useContext } from "react";
+import CardContext from "../context/CardContext";
 import Puntuacion from "./Puntuacion";
 
-const Modal = ({ setModal, setSelect, select, setMsg, msg }) => {
-
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (!select.name) {
-      setMsg(true)
-      setTimeout(() => {
-        setMsg(false)
-      }, 2000);
-    } else {
-      setModal(true)
-    }
-  }
-
-
+const Modal = () => {
+  const { handleSubmit } = useContext(CardContext)
   return (
     <div className="modal-container">
       <article className="modal">
@@ -30,7 +18,7 @@ const Modal = ({ setModal, setSelect, select, setMsg, msg }) => {
         <p>to help us improve our offering!</p>
 
         <form onSubmit={handleSubmit}>
-          <Puntuacion setModal={setModal} setSelect={setSelect} select={select} setMsg={setMsg} msg={msg} />
+          <Puntuacion />
           <nav>
             <input type="submit" value="SUBMIT" />
           </nav>

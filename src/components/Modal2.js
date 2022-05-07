@@ -1,5 +1,7 @@
 
+import { useContext } from "react";
 import styledComponents from "styled-components";
+import CardContext from "../context/CardContext";
 import ThankYou from "./ThankYou";
 
 
@@ -45,12 +47,11 @@ width: 85%;
 height: 40%;
 color:rgb(177, 179, 185);
 `
-const Modal2 = ({ setModal, initialSelect, setSelect, select }) => {
+const Modal2 = () => {
+  const { select, back } = useContext(CardContext);
   const { name } = select;
-  const back = () => {
-    setModal(false)
-    setSelect(initialSelect)
-  }
+
+
   return (
 
     <MyContent>

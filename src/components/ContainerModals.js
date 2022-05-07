@@ -1,17 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
+import CardContext from "../context/CardContext";
 import Message from "./Message";
 import Modal from "./Modal";
 import Modal2 from "./Modal2";
-const initialSelect = {
-  name: ""
-}
+
 const ContainerModals = () => {
-  const [msg, setMsg] = useState(false);
-  const [modal, setModal] = useState(false);
-  const [select, setSelect] = useState(initialSelect);
+  const { msg, modal } = useContext(CardContext);
   return (
     <div>
-      {modal ? <Modal2 setModal={setModal} initialSelect={initialSelect} setSelect={setSelect} select={select} /> : <Modal setModal={setModal} setSelect={setSelect} select={select} initialState={initialSelect} msg={msg} setMsg={setMsg} />}
+      {modal ? <Modal2 /> : <Modal />}
       <br />
       <article className={`${msg ? "active-msg" : "desactive-msg"}`}>
         {<Message />}

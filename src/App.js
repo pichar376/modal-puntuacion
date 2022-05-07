@@ -1,12 +1,15 @@
 
 import ContainerModals from "./components/ContainerModals";
+import { CardProvider } from "./context/CardContext";
 
 
 function App() {
   return (
-    <div>
-      <ContainerModals />
-    </div >
+    <CardProvider>
+      <div>
+        <ContainerModals />
+      </div >
+    </CardProvider>
 
   );
 }

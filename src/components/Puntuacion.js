@@ -1,27 +1,13 @@
-import { useState } from "react";
-
-const initialActive = {
-  activo: false,
-  id: "",
-}
+import { useContext } from "react";
+import CardContext from "../context/CardContext";
 
 
 
-const Puntuacion = ({ setSelect, select, setMsg, msg }) => {
-  const [active, setActive] = useState(initialActive);
-  const handleClick = (e) => {
-    setSelect({
-      name: e.target.name,
-    })
-    setActive({
-      id: e.target.name
-    })
-    setMsg(false)
-    console.log(select.name)
-
-  }
 
 
+const Puntuacion = () => {
+
+  const { handleClick, active, msg } = useContext(CardContext);
 
 
   return (
